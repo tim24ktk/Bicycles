@@ -67,6 +67,8 @@ exports.sprite = sprite;
 const copy = () => {
   return gulp.src([
     "source/fonts/**/*.{woff,woff2}",
+    "source/css/**/*.css",
+    "source/**/*.js"
   ], {
     base: "source"
   })
@@ -89,16 +91,6 @@ const html = () => {
 
 exports.html = html;
 
-// js
-
-const minjs  = () => {
-  return pipeline(
-    gulp.src("source/**/*.js"),
-    uglify(),
-    gulp.dest("build")
-  )
-}
-
 const build = gulp.series(
   clean,
   copy,
@@ -106,7 +98,6 @@ const build = gulp.series(
   createWebp,
   images,
   sprite,
-  minjs,
   html
 );
 

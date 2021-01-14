@@ -5,43 +5,66 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Велосипеды</title>
+  <link rel="preload" href="fonts/open-sans-v18-latin_cyrillic-regular.woff2" as="font">
   <link href="css/styles.min.css" rel="stylesheet">
 </head>
 
 <body>
-  <header>
-    <nav class="main-navigation">
-      <ul class="menu-list">
+  <header class="main-header">
+    <section class="main-menu main-menu--no-js">
+      <ul class="main-menu__links menu-list">
         <li class="menu-list__item">
-          <a class="menu-list__link" href="">О нас</a>
+          <a class="menu-list__link" href="#about">О нас</a>
         </li>
         <li class="menu-list__item">
-          <a class="menu-list__link" href="">Виды велосипедов</a>
+          <a class="menu-list__link" href="#offers">Виды велосипедов</a>
         </li>
         <li class="menu-list__item">
-          <a class="menu-list__link" href="">Видео про велосипеды</a>
+          <a class="menu-list__link" href="#video">Видео про велосипеды</a>
         </li>
         <li class="menu-list__item">
-          <a class="menu-list__link" href="">Контакты</a>
+          <a class="menu-list__link" href="#contacts">Контакты</a>
         </li>
       </ul>
+
+      <button class="main-menu__button main-menu__button--no-js" type="button">
+        <span class="visually-hidden">Закрыть меню</span>
+        <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M1 23.7213L23 1M23 23.7213L1 1" stroke="#141517" stroke-opacity="0.2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+    </section>
+    <nav class="main-navigation main-navigation--wrapper">
+      <a class="main-navigation__logo logo">
+        <img src="img/logo.svg" width="68" height="21" alt="Логотип">
+      </a>
+      <ul class="main-navigation__menu menu-list">
+        <li class="menu-list__item">
+          <a class="menu-list__link" href="#about">О нас</a>
+        </li>
+        <li class="menu-list__item">
+          <a class="menu-list__link" href="#offers">Виды велосипедов</a>
+        </li>
+        <li class="menu-list__item">
+          <a class="menu-list__link" href="#video">Видео про велосипеды</a>
+        </li>
+        <li class="menu-list__item">
+          <a class="menu-list__link" href="#contacts">Контакты</a>
+        </li>
+      </ul>
+
+      <button class="main-navigation__button" type="button">
+        <span class="visually-hidden">Открыть меню</span>
+        <svg width="30" height="30" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M3.75 21h22.5v-1H3.75v1zm0-6.25h22.5v-1H3.75v1zm0-7.25v1h22.5v-1H3.75z" fill="#000"/></svg>
+      </button>
     </nav>
   </header>
   <main>
     <h1>Велосипеды</h1>
     <section class="promo-wrapper">
       <section class="promo">
-        <a href="#">
-          <svg width="68" height="21" viewBox="0 0 68 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M13.3636 0V20.0455H10.0705V5.82273L8.97273 7.20682L6.825 9.975L6.72954 10.0705L6.58636 9.975L4.43864 7.20682L3.34091 5.775V20.0455H0V0H3.34091L6.72954 4.29545L10.0705 0H13.3636Z" fill="#0AD9C6"/>
-            <path d="M8.30444 10.0704L8.20898 9.97498L8.30444 10.0704Z" fill="#0AD9C6"/>
-            <path d="M8.44787 9.97498L8.35241 10.0704H8.30469L8.44787 9.97498Z" fill="#0AD9C6"/>
-            <path d="M38.2092 5.61453L29.0823 12.316L31.1955 15.194L40.3224 8.49252L38.2092 5.61453Z" fill="#0AD9C6"/>
-            <path d="M26.6674 3C22.8035 3 19.6243 6.13028 19.6243 10.0431C19.6243 13.9071 22.7546 17.0863 26.6674 17.0863C30.5313 17.0863 33.7105 13.956 33.7105 10.0431C33.7105 6.17919 30.5313 3 26.6674 3ZM26.6674 13.2712C24.8577 13.2712 23.4393 11.8039 23.4393 10.0431C23.4393 8.23344 24.9066 6.81503 26.6674 6.81503C28.4282 6.81503 29.8955 8.28235 29.8955 10.0431C29.8955 11.8039 28.4282 13.2712 26.6674 13.2712Z" fill="#0AD9C6"/>
-            <path d="M43.6396 3C39.7756 3 36.5964 6.13028 36.5964 10.0431C36.5964 13.9071 39.7267 17.0863 43.6396 17.0863C47.5035 17.0863 50.6827 13.956 50.6827 10.0431C50.6338 6.17919 47.5035 3 43.6396 3ZM43.6396 13.2712C41.8299 13.2712 40.4115 11.8039 40.4115 10.0431C40.4115 8.23344 41.8788 6.81503 43.6396 6.81503C45.4004 6.81503 46.8677 8.28235 46.8677 10.0431C46.8677 11.8039 45.4004 13.2712 43.6396 13.2712Z" fill="#0AD9C6"/>
-            <path d="M67.5977 0.238647V20.2841H64.2568V9.87956L61.4409 7.20683L59.3409 5.15456V20.2841H56V0.238647H59.2932H59.3409L63.2545 4.0091L64.2568 4.96365V0.238647H67.5977Z" fill="#0AD9C6"/>
-            <rect x="37" y="3" width="6" height="4" fill="#0AD9C6"/>
-          </svg>
+        <a class="logo">
+          <img src="img/logo.svg" width="68" height="21" alt="Логотип">
         </a>
         <h2 class="promo__heading">Мы продаем велосипеды</h2>
         <p class="promo__tagline">Наш магазин отбирает только самые лучшие велосипеды для продажи</p>
@@ -61,7 +84,7 @@
         </form>
       </section>
     </section>
-    <section class="facts">
+    <section class="about-us" id="about">
       <h2 class="facts__heading">Несколько фактов о нас</h2>
       <ol>
         <li>Самый широкий выбор велосипедов!</li>
@@ -70,7 +93,7 @@
         <li>Профессиональные консультации!</li>
       </ol>
     </section>
-    <section class="offers">
+    <section class="offers" id="offers">
       <h2 class="offers__heding">Виды велосипедов</h2>
       <ul class="offers-list">
         <li class="offers-list__item">
@@ -87,7 +110,7 @@
         </li>
       </ul>
     </section>
-    <section class="video">
+    <section class="video" id="video">
       <h2 class="video__heading">Видео про велосипеды</h2>
       <p class="video__description">В этом видео мы подробно расскажем про особенности выбора велосипеда для себя.</p>
       <video src="video__preview" poster="img/preview-desctop.png" width="929" height="522">
@@ -96,7 +119,7 @@
       <button type="button">Смотреть видео</button>
     </section>
   </main>
-  <footer class="main-footer">
+  <footer class="main-footer" id="contacts">
     <h2 class="main-footer__heading">Как нас найти?</h2>
     <p class="main-footer__address">Мы находимся по адресу: Санкт-Петербург, ул. Большая Конюшенная, д. 19</p>
     <img class="main-footer__image" src="img/map-desctop.png" width="957" height="530" alt="Карта">
@@ -109,6 +132,7 @@
       </li>
     </ul>
   </footer>
+  <script src="js/main.js"></script>
 </body>
 
 </html>
