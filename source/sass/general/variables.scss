@@ -1,6 +1,8 @@
 $basic-white: #ffffff;
-$transparency-white: rgba($basic-white, 0.2%);
+$transparency-white: rgba($basic-white, 0.2);
 $basic-black: #000000;
+$black-grey:  rgba(0, 0, 0, 0.7);
+$transparency-black: rgba($basic-black, 0.5);
 $min-mobile-width: 320px;
 $max-mobile-width: 767px;
 $max-tablet-width: 1023px;
@@ -8,3 +10,7 @@ $desktop-width: 1024px;
 $button-background: #0ad9c6;
 $button-color: #48494d;
 $grey-light: #f6f6f6;
+$placeholder-color: #1c1c1c;
+$border-color: #c9ccd4;
+$heading-color: #1f1f1f;
+$bacckground-grey: #f6f7f9;

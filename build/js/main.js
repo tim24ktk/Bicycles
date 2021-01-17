@@ -11,6 +11,7 @@
   const openMenu = () => {
     mainMenu.style.display = `flex`;
     mainMenu.style.position = `fixed`;
+    mainMenu.style.zIndex = `100`;
   };
 
   const closeMenu = () => {
@@ -20,4 +21,13 @@
   mainMenuButton.addEventListener(`click`, closeMenu);
 
   mainNavigationButton.addEventListener(`click`, openMenu);
+
+  const phoneInput = document.querySelector(`input[type=tel]`);
+  const pattern = /^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$/;
+
+  phoneInput.addEventListener(`invalid`, () => {
+    if (!pattern.test(phoneInput.value)) {
+      phoneInput.setCustomValidity('Номер телефона должен быть написан цифрами!');
+    }
+  });
 })();

@@ -4,6 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="велосипед, велосипеды, дорожный велосипед, горный велосипед, детский велосипед, велосипед для взрослых">
   <title>Велосипеды</title>
   <link rel="preload" href="fonts/open-sans-v18-latin_cyrillic-regular.woff2" as="font">
   <link href="css/styles.min.css" rel="stylesheet">
@@ -12,6 +13,7 @@
 <body>
   <header class="main-header">
     <section class="main-menu main-menu--no-js">
+      <h2 class="visually-hidden">Основное меню</h2>
       <ul class="main-menu__links menu-list">
         <li class="menu-list__item">
           <a class="menu-list__link" href="#about">О нас</a>
@@ -58,77 +60,121 @@
         <svg width="30" height="30" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M3.75 21h22.5v-1H3.75v1zm0-6.25h22.5v-1H3.75v1zm0-7.25v1h22.5v-1H3.75z" fill="#000"/></svg>
       </button>
     </nav>
-  </header>
-  <main>
-    <h1>Велосипеды</h1>
-    <section class="promo-wrapper">
+    <section class="main-block main-block--wrapper">
+      <h2 class="visually-hidden">Основной блок</h2>
       <section class="promo">
-        <a class="logo">
+        <a class="promo__logo logo">
           <img src="img/logo.svg" width="68" height="21" alt="Логотип">
         </a>
         <h2 class="promo__heading">Мы продаем велосипеды</h2>
         <p class="promo__tagline">Наш магазин отбирает только самые лучшие велосипеды для продажи</p>
       </section>
       <section class="feedback">
-        <h2>Форма обратной связи</h2>
+        <h2 class="visually-hidden">Форма обратной связи</h2>
         <p class="feedback__prompt">Заполните поля ниже и мы подберем велосипед Вашей мечты</p>
-        <form class="feedback__form" action="#" method="POST">
+        <form class="feedback__form" action="#" method="POST" autocomplete="off">
 
-          <label for="name">Имя</label>
-          <input type="text" id="name" placeholder="Введите Ваше Имя">
+          <label class="visually-hidden" for="name">Имя</label>
+          <input type="text" id="name" placeholder="Введите Ваше Имя" minlength="2" maxlength="30" required>
 
-          <label for="phone">Телефон</label>
-          <input type="tel" id="phone" placeholder="Введите Ваш номер телефона">
+          <label class="visually-hidden" for="phone">Телефон</label>
+          <input type="tel" pattern="8-[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}" id="phone" placeholder="Введите Ваш номер телефона" required>
 
           <button type="submit">Подобрать велосипед мечты</button>
         </form>
       </section>
     </section>
-    <section class="about-us" id="about">
-      <h2 class="facts__heading">Несколько фактов о нас</h2>
-      <ol>
-        <li>Самый широкий выбор велосипедов!</li>
-        <li>Доставка велосипедов по всей России!</li>
-        <li>Большой выбор крутых аксессуаров!</li>
-        <li>Профессиональные консультации!</li>
-      </ol>
-    </section>
-    <section class="offers" id="offers">
-      <h2 class="offers__heding">Виды велосипедов</h2>
-      <ul class="offers-list">
-        <li class="offers-list__item">
-          <img class="offers-list__image" src="img/first-bike-desctop.png" width="342" height="503" alt="Дорожный велосипед">
-          <p class="offers-list__image-description">Дорожный велосипед</p>
+  </header>
+  <main>
+    <h1 class="visually-hidden">Велосипеды</h1>
+    <section class="about-us about-us--wrapper" id="about">
+      <h2 class="about-us__heading">Несколько фактов о нас</h2>
+      <ul class="about-us__list facts-list">
+        <li class="facts-list__item">
+          <p class="facts-list__item-number">01</p>
+          <p class="facts-list__item-text">Самый широкий выбор велосипедов!</p>
         </li>
-        <li class="offers-list__item">
-          <img class="offers-list__image" src="img/second-bike-desctop.png" width="342" height="566" alt="Горный велосипед">
-          <p class="offers-list__image-description">Горный велосипед</p>
+        <li class="facts-list__item">
+          <p class="facts-list__item-number">02</p>
+          <p class="facts-list__item-text facts-list__item-text--margin">Доставка велосипедов по всей России!</p>
         </li>
-        <li class="offers-list__item">
-          <img class="offers-list__image" src="img/third-bike-desctop.png" width="342" height="513" alt="Детский велосипед">
-          <p class="offers-list__image-description">Детский велосипед</p>
+        <li class="facts-list__item">
+          <p class="facts-list__item-number facts-list__item-number--three">03</p>
+          <p class="facts-list__item-text facts-list__item-text--margin  facts-list__item-text--margin-three">Большой выбор крутых аксессуаров!</p>
+        </li>
+        <li class="facts-list__item">
+          <p class="facts-list__item-number facts-list__item-number--four">04</p>
+          <p class="facts-list__item-text facts-list__item-text--margin  facts-list__item-text--margin-fourth">Профессиональные консультации!</p>
         </li>
       </ul>
     </section>
+    <section class="offers" id="offers">
+      <div class="offers__block offers__block--wrapper">
+        <h2 class="offers__heading">Виды велосипедов</h2>
+        <ul class="offers-list">
+          <li class="offers-list__item offers-list__item--first">
+            <div class="offers-list__wrapper offers-list__wrapper--first">
+              <picture>
+                <source srcset="img/first-bike@1x.webp 1x, img/first-bike@2x.webp 2x" type="image/webp">
+                <!--1x: 378*504; 2x: 756*1007-->
+                <img class="offers-list__image" src="img/first-bike@1x.png" srcset="img/first-bike@2x.png 2x" width="378" height="504" alt="Дорожный велосипед">
+              </picture>
+              <p class="offers-list__image-description">Дорожный велосипед</p>
+            </div>
+          </li>
+          <li class="offers-list__item offers-list__item--second">
+            <div class="offers-list__wrapper offers-list__wrapper--second">
+              <picture>
+                <source srcset="img/second-bike@1x.webp 1x, img/second-bike@2x.webp 2x" type="image/webp">
+                <!--1x: 378*566; 2x: 756*1131-->
+                <img class="offers-list__image offers-list__image--second" src="img/second-bike@1x.png" srcset="img/second-bike@2x.png 2x" width="378" height="566" alt="Горный велосипед">
+              </picture>
+              <p class="offers-list__image-description">Горный велосипед</p>
+            </div>
+          </li>
+          <li class="offers-list__item offers-list__item--third">
+            <div class="offers-list__wrapper offers-list__wrapper--third">
+              <picture>
+                <source srcset="img/third-bike@1x.webp 1x, img/third-bike@2x.webp 2x" type="image/webp">
+                <!--1x: 378*513; 2x: 756*1026-->
+                <img class="offers-list__image  offers-list__image--third" src="img/third-bike@1x.png" srcset="img/third-bike@2x.png 2x" width="378" height="513" alt="Детский велосипед">
+              </picture>
+              <p class="offers-list__image-description">Детский велосипед</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
     <section class="video" id="video">
-      <h2 class="video__heading">Видео про велосипеды</h2>
-      <p class="video__description">В этом видео мы подробно расскажем про особенности выбора велосипеда для себя.</p>
-      <video src="video__preview" poster="img/preview-desctop.png" width="929" height="522">
-        <source src="" type="video/mp4">
-      </video>
-      <button type="button">Смотреть видео</button>
+      <div class="video__block video__block--wrapper">
+        <h2 class="video__heading">Видео про велосипеды</h2>
+        <p class="video__description">В этом видео мы подробно расскажем про особенности выбора велосипеда для себя.</p>
+        <div class="video__container">
+          <picture>
+            <source srcset="img/preview@1x.webp 1x, img/preview@2x.webp 2x" type="image/webp">
+            <img class="video__preview" src="img/preview@1x.png" srcset="img/preview@2x.png 2x" width="929" height="522" alt="Постер видео">
+          </picture>
+          <button type="button">
+            <span class="visually-hidden">Смотреть видео</span>
+            <img src="img/play.svg" width="14" height="19" alt="Нажать для проигрывания">
+          </button>
+        </div>
+      </div>
     </section>
   </main>
-  <footer class="main-footer" id="contacts">
+  <footer class="main-footer main-footer--wrapper" id="contacts">
     <h2 class="main-footer__heading">Как нас найти?</h2>
     <p class="main-footer__address">Мы находимся по адресу: Санкт-Петербург, ул. Большая Конюшенная, д. 19</p>
-    <img class="main-footer__image" src="img/map-desctop.png" width="957" height="530" alt="Карта">
+    <picture>
+      <source srcset="img/map@1x.webp 1x, img/map@2x.webp 2x" type="image/webp">
+      <img class="main-footer__image" src="img/map@1x.png" srcset="img/map@2x.png 2x" width="957" height="891" alt="Карта">
+    </picture>
     <ul class="main-footer__contacts contacts-list">
       <li class="contacts-list__item">
-        <a class="contacts-list__link" href="mailto:puteshestviemechta@gmail.ru">puteshestviemechta@gmail.ru</a>
+        <a class="contacts-list__link contacts-list__link--mail" href="mailto:puteshestviemechta@gmail.ru">puteshestviemechta@gmail.ru</a>
       </li>
       <li class="contacts-list__item">
-        <a class="contacts-list__link" href="tel:+749978468446">+7 (499) -784-684-46</a>
+        <a class="contacts-list__link contacts-list__link--phone" href="tel:+749978468446">+7 (499) -784-684-46</a>
       </li>
     </ul>
   </footer>
