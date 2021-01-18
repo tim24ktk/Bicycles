@@ -70,4 +70,8 @@
       background-repeat: no-repeat;
     }
   }
+
+  &:hover {
+    color: $button-background;
+  }
 }

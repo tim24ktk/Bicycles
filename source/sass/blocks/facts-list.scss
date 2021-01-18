@@ -9,7 +9,7 @@
   @media (max-width: $max-tablet-width) {
     margin-top: 0;
     margin-left: 0;
-    width: 540px;
+    width: 556px;
     justify-content: space-between;
   }
 
@@ -28,7 +28,7 @@
   text-align: center;
 
   @media (max-width: $max-tablet-width) {
-    width: 46%;
+    width: 263px;
     margin-top: 31px;
     margin-right: 0;
     margin-bottom: 9px;
@@ -56,7 +56,7 @@
 
 .facts-list__item-number {
   @include reset;
-  font-weight: 600;
+  font-weight: 700;
   font-size: 2vw;
   line-height: 38px;
   text-align: center;
@@ -64,12 +64,10 @@
   color: $button-background;
 
   @media (max-width: $max-tablet-width) {
-    font-size: 3.9vw;
+    font-size: 28px;
   }
 
   @media (max-width: $max-mobile-width) {
-    font-size: 9vw;
-
     &--three {
       margin-top: 5px;
     }
@@ -84,7 +82,6 @@
   @include reset;
 
   margin-top: 16px;
-
   font-weight: 400;
   font-size: 1.55vw;
   line-height: 34px;
@@ -93,12 +90,12 @@
   color: $basic-black;
 
   @media (max-width: $max-tablet-width) {
-    font-size: 2.9vw;
+    font-size: 22px;
   }
 
   @media (max-width: $max-mobile-width) {
-    width: 86%;
-    font-size: 5.64vw;
+    width: 263px;
+    font-size: 18px;
 
     &--margin {
       margin-top: 10px;

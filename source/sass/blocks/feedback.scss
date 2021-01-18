@@ -33,15 +33,13 @@
   @media (max-width: $max-tablet-width) {
     margin-top: 70px;
     margin-left: 0;
-    width: 42%;
-    font-size: 2.3vw;
+    width: 321px;
+    font-size: 18px;
     color: $basic-black;
   }
 
   @media (max-width: $max-mobile-width) {
-    width: 95%;
-    font-size: 5.6vw;
-    line-height: 8.8vw;
+    width: 288px;
   }
 }
 
@@ -127,5 +125,10 @@
     padding-bottom: 20px;
     margin-right: 2px;
     align-self: center;
+  }
+
+  &:focus,
+  &:hover {
+    background-color: $button-background-focus;
   }
 }

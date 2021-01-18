@@ -23,11 +23,11 @@
   mainNavigationButton.addEventListener(`click`, openMenu);
 
   const phoneInput = document.querySelector(`input[type=tel]`);
-  const pattern = /^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$/;
+  const pattern = /^(\+7|7|8)?[\s\-]?\(?[489][0-9]{2}\)?[\s\-]?[0-9]{3}[\s\-]?[0-9]{2}[\s\-]?[0-9]{2}$/;
 
   phoneInput.addEventListener(`invalid`, () => {
-    if (!pattern.test(phoneInput.value)) {
-      phoneInput.setCustomValidity('Номер телефона должен быть написан цифрами!');
+    if (!pattern.test(+phoneInput.value)) {
+      phoneInput.setCustomValidity(`Номер телефона должен быть написан цифрами длина не менее 10 символов и не более 18!`);
     }
   });
 })();

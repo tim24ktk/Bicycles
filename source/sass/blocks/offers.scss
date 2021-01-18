@@ -1,6 +1,6 @@
 .offers {
   margin-top: 132px;
-  padding-bottom: 149px;
+  padding-bottom: 200px;
   background-color: $bacckground-grey;
 
   @media (max-width: $max-tablet-width) {
@@ -36,11 +36,7 @@
 
   @media (max-width: $max-tablet-width) {
     margin-top: 55px;
-    font-size: 3.11vw;
-  }
-
-  @media (max-width: $max-mobile-width) {
-    font-size: 7.52vw;
+    font-size: 24px;
   }
 }
 
@@ -110,16 +106,16 @@
 
 
 .offers-list__image {
-  height: 503px;
+  height: 98.1%;
   border-radius: 10px;
   object-fit: cover;
 
   &--second {
-    height: 566px;
+    height: 99.6%;
   }
 
   &--third {
-    height: 513px;
+    height: 98.5%;
     object-fit: fill;
   }
 
@@ -136,7 +132,7 @@
   &--first {
     &::before {
       position: absolute;
-      top: calc(50% - 123px);
+      top: calc(50% - 100px);
       left: -59px;
       content: "";
 
@@ -181,7 +177,7 @@
 
     &::after {
       position: absolute;
-      bottom: 31px;
+      bottom: -20px;
       right: -22px;
       content: "";
 
