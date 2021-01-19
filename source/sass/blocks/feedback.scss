@@ -66,9 +66,9 @@
 
 .feedback__form input {
   margin-bottom: 20px;
-  padding: 15px;
-  padding-bottom: 15px;
+  padding: 5px;
   padding-left: 29px;
+  height: 48px;
   border: 1px solid $border-color;
   border-radius: 4px;
 
@@ -77,9 +77,17 @@
     font-style: normal;
     font-weight: 400;
     font-size: 15px;
-    line-height: 19px;
+    line-height: 39px;
     color: $placeholder-color;
     opacity: 0.5;
+
+    @media (max-width: $max-tablet-width) {
+      line-height: 35px;
+    }
+
+    @media (max-width: $max-mobile-width) {
+      line-height: 38px;
+    }
   }
 
   @media (max-width: $max-tablet-width) {

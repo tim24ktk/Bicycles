@@ -9,13 +9,15 @@
   }
 
   const openMenu = () => {
-    mainMenu.style.display = `flex`;
-    mainMenu.style.position = `fixed`;
-    mainMenu.style.zIndex = `100`;
+    if (mainMenu) {
+      mainMenu.classList.add(`main-menu--open`);
+    }
   };
 
   const closeMenu = () => {
-    mainMenu.style.display = `none`;
+    if (mainMenu) {
+      mainMenu.classList.remove(`main-menu--open`);
+    }
   };
 
   mainMenuButton.addEventListener(`click`, closeMenu);
@@ -23,11 +25,27 @@
   mainNavigationButton.addEventListener(`click`, openMenu);
 
   const phoneInput = document.querySelector(`input[type=tel]`);
+  const nameInput = document.querySelector(`#name`);
   const pattern = /^(\+7|7|8)?[\s\-]?\(?[489][0-9]{2}\)?[\s\-]?[0-9]{3}[\s\-]?[0-9]{2}[\s\-]?[0-9]{2}$/;
+  const MAX_LENGTH = 10;
 
-  phoneInput.addEventListener(`invalid`, () => {
-    if (!pattern.test(+phoneInput.value)) {
-      phoneInput.setCustomValidity(`Номер телефона должен быть написан цифрами длина не менее 10 символов и не более 18!`);
+  const validatePhoneNumber = () => {
+    const valid = pattern.test(phoneInput.value);
+
+    if (valid && phoneInput.value.length >= MAX_LENGTH) {
+      phoneInput.value = ``;
+      nameInput.value = ``;
+    } else {
+      phoneInput.setCustomValidity(`Введите корректный номер телефона`);
     }
-  });
+
+    return valid;
+  };
+
+  const onPhoneInputValidate = () => {
+    validatePhoneNumber();
+  }
+
+  phoneInput.addEventListener(`invalid`, onPhoneInputValidate);
+
 })();
