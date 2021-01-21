@@ -93,11 +93,11 @@ exports.html = html;
 
 const build = gulp.series(
   clean,
-  copy,
   styles,
   createWebp,
   images,
   sprite,
+  copy,
   html
 );
 
