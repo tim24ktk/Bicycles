@@ -20,14 +20,19 @@
     }
   };
 
-  mainMenuButton.addEventListener(`click`, closeMenu);
+  if (mainMenuButton) {
+    mainMenuButton.addEventListener(`click`, closeMenu);
+  }
 
-  mainNavigationButton.addEventListener(`click`, openMenu);
+  if (mainNavigationButton) {
+    mainNavigationButton.addEventListener(`click`, openMenu);
+  }
 
   const phoneInput = document.querySelector(`input[type=tel]`);
   const nameInput = document.querySelector(`#name`);
   const pattern = /^(\+7|7|8)?[\s\-]?\(?[489][0-9]{2}\)?[\s\-]?[0-9]{3}[\s\-]?[0-9]{2}[\s\-]?[0-9]{2}$/;
   const MAX_LENGTH = 10;
+  const errorMessage = `Введите корректный номер телефона`;
 
   const validatePhoneNumber = () => {
     const valid = pattern.test(phoneInput.value);
@@ -36,7 +41,7 @@
       phoneInput.value = ``;
       nameInput.value = ``;
     } else {
-      phoneInput.setCustomValidity(`Введите корректный номер телефона`);
+      phoneInput.setCustomValidity(`${errorMessage}`);
     }
 
     return valid;
@@ -46,6 +51,8 @@
     validatePhoneNumber();
   }
 
-  phoneInput.addEventListener(`invalid`, onPhoneInputValidate);
+  if (typeof phoneInput !== `undefined`) {
+    phoneInput.addEventListener(`invalid`, onPhoneInputValidate);
+  }
 
 })();
