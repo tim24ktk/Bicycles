@@ -51,7 +51,7 @@
     validatePhoneNumber();
   }
 
-  if (typeof phoneInput !== `undefined`) {
+  if (phoneInput) {
     phoneInput.addEventListener(`invalid`, onPhoneInputValidate);
   }
 
